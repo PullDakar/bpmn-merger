@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             exporter="Camunda Modeler" exporterVersion="4.5.0" expressionLanguage="http://www.w3.org/1999/XPath"
+             id="Definitions_1onh6lo" name="" targetNamespace="http://bpmn.io/schema/bpmn"
+             typeLanguage="http://www.w3.org/2001/XMLSchema"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://bpmn.sourceforge.net/schemas/BPMN20.xsd">
+    <bpmn:process id="Process_1dct2qa" isClosed="false" isExecutable="true" processType="None">
+        <bpmn:startEvent id="StartEvent_1" isInterrupting="true" parallelMultiple="false">
+            <bpmn:outgoing>Flow_00svkzs</bpmn:outgoing>
+            <bpmn:outputSet/>
+        </bpmn:startEvent>
+        <bpmn:sequenceFlow id="Flow_00svkzs" sourceRef="StartEvent_1" targetRef="Activity_1v7luym"/>
+        <bpmn:endEvent id="Event_1h9mpq9">
+            <bpmn:incoming>Flow_1b45wfg</bpmn:incoming>
+            <bpmn:inputSet/>
+        </bpmn:endEvent>
+        <bpmn:scriptTask completionQuantity="1" id="Activity_1v7luym" isForCompensation="false"
+                         scriptFormat="javascript" startQuantity="1">
+            <bpmn:incoming>Flow_00svkzs</bpmn:incoming>
+            <bpmn:outgoing>Flow_1b45wfg</bpmn:outgoing>
+            <bpmn:script>
+                <![CDATA[console.log('Hello World')]]>
+            </bpmn:script>
+        </bpmn:scriptTask>
+        <bpmn:sequenceFlow id="Flow_1b45wfg" sourceRef="Activity_1v7luym" targetRef="Event_1h9mpq9"/>
+    </bpmn:process>
+    <bpmndi:BPMNDiagram id="Yaoqiang_Diagram-Process_1dct2qa" name="Untitled Diagram" resolution="96.0">
+        <bpmndi:BPMNPlane bpmnElement="Process_1dct2qa">
+            <bpmndi:BPMNShape bpmnElement="StartEvent_1" id="Yaoqiang-StartEvent_1">
+                <dc:Bounds height="32.0" width="32.0" x="179.0" y="99.0"/>
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds height="18.8" width="6.0" x="192.0" y="139.6"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Event_1h9mpq9" id="Yaoqiang-Event_1h9mpq9">
+                <dc:Bounds height="32.0" width="32.0" x="452.0" y="99.0"/>
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds height="18.8" width="6.0" x="465.0" y="139.6"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNShape bpmnElement="Activity_1v7luym" id="Yaoqiang-Activity_1v7luym">
+                <dc:Bounds height="80.0" width="100.0" x="280.0" y="77.0"/>
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds height="18.8" width="6.0" x="327.0" y="109.6"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNShape>
+            <bpmndi:BPMNEdge bpmnElement="Flow_1b45wfg" id="Yaoqiang-Flow_1b45wfg">
+                <di:waypoint x="379.7222222222223" y="117.0"/>
+                <di:waypoint x="451.7246336693756" y="115.0"/>
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds height="18.8" width="6.0" x="413.0" y="106.87"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
+            <bpmndi:BPMNEdge bpmnElement="Flow_00svkzs" id="Yaoqiang-Flow_00svkzs">
+                <di:waypoint x="210.71981077506902" y="115.0"/>
+                <di:waypoint x="279.7222222222223" y="117.0"/>
+                <bpmndi:BPMNLabel>
+                    <dc:Bounds height="18.8" width="6.0" x="242.5" y="106.32"/>
+                </bpmndi:BPMNLabel>
+            </bpmndi:BPMNEdge>
+        </bpmndi:BPMNPlane>
+    </bpmndi:BPMNDiagram>
+</definitions>
